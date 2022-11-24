@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex {
+    display: flex;
+}
+
+.flexColumnCentered {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 0 20%;
+}
+
+.title {
+    font-size: 3.5rem;
+}
+
+.subtitle {
+    font-size: 2.7rem;
+}
+
+video {
+    width: 1020px;
+}
+
+.scrollableBox {
+    height: 300px;
+    width: 500px;
+    overflow-y: scroll;
+
+    font-size: 1.8rem;
+}
