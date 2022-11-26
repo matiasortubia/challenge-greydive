@@ -1,10 +1,14 @@
-import styles from './page.module.css';
+import React from 'react';
+import styles from './pageTemplate.module.css';
 
 /* Renders a page from the data on a json object.
    ob: json object from which the data will be rendered 
    
    returns: a jsx expression with the page elements rendered. */
-function Page({ data }) {
+function PageTemplate({ data }) {
+    // Converts the string to a jsx expression
+    console.log(data.transcripcion, "hola");
+    const transcription = data.transcripcion.split('<br>').map(str => <React.Fragment >{str}<br /></React.Fragment>); 
     return (
         <main className={`${ styles.flex } ${ styles.flexColumnCentered }`}>
             <div className={ styles.wrapper }>
@@ -13,15 +17,17 @@ function Page({ data }) {
                 <h3 className={ styles.subtitle }>{ data.plataforma }</h3>
                 <video className={ styles.centered } controls>
                     <source src={ data.linkVideo } type="video/mp4" />
-                    Your browser does not support the video tag.
+                    Tu navegador no soporta el tag de video.
                 </video>
-                <h3 className={ styles.subtitle }>Transcripcion</h3>
+                <h3 className={ styles.subtitle }>Transcripción</h3>
                 <div className={ styles.scrollableBox }>
-                    { data.transcripcion }
+                    { transcription }
                 </div>
+                <h3 className={ styles.subtitle }>Tareas</h3>
+                <p className={ styles.parragraph }>{`Escenario: ${data.escenario}`}</p>
             </div>
         </main>
     );
 }
 
-export { Page };
+export { PageTemplate };
