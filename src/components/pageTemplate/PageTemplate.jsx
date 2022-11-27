@@ -34,7 +34,7 @@ function PageTemplate({ content }) {
                         <p>{ transcription }</p>
                     </div>
                     <h3 className={ styles.subtitle }>Tareas</h3>
-                    <p>{`Escenario: ${ content.escenario }`}</p>
+                    <p className={ styles.introductionText }>{`Escenario: ${ content.escenario }`}</p>
                     <Tareas content={ content } />
                 </main>
             </div>

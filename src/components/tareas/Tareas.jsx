@@ -7,7 +7,6 @@ const Tareas = ({ content }) => {
     return (
         <>
             { content.preguntas.map((item, i) => {
-                //const itemContent = item.texto.replace('\\n', '\n')
                 const itemContent = item.texto.split('\\n').map(str => (
                     <React.Fragment key={ uuidv4() }>{str}<br /></React.Fragment>
                 ));
@@ -19,6 +18,7 @@ const Tareas = ({ content }) => {
                             <br />
                             { itemContent }
                             </strong>
+                            <br />
                             <p className={ styles.textoDuracion }>
                                 {`Duración de la tarea: ${item.tiempo}`} 
                             </p>
