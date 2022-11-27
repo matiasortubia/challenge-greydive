@@ -6,9 +6,35 @@
 }
 
 .mainBox {
-    max-width: 90%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-top: 10rem;
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linkBox {
+    height: 8rem;
+    width: 80vw;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .mainBox {
+        max-width: 60%;
+    }
+
+    .linkBox {
+        width: 50vw;
+    }
 }

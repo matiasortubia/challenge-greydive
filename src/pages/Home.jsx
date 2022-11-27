@@ -10,14 +10,18 @@ const Home = ({ data }) => {
             <Header />
             <div className={ styles.wrapper }>
                 <main className={ styles.mainBox }>
-                    <ul>
+                    <h2>Tests</h2>
+                    <div className={ styles.linksContainer }>
                         { data.map(el => {
                         return (
-                        <li key={ uuidv4() }>
-                            <Link to={ `/${ el.cliente }` }>{ el.cliente }</Link>
-                        </li> );
+                            <Link to={ `/${ el.cliente }` }>
+                                <button className={ styles.linkBox } key={ uuidv4() }>
+                                    { el.cliente }
+                                </button>        
+                            </Link>
+                            );
                         }) }
-                    </ul>
+                    </div>
                 </main>
             </div>
         </>
