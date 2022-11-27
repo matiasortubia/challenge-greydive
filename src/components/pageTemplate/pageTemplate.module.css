@@ -1,20 +1,11 @@
 .wrapper {
     display: flex;
     flex-flow: column nowrap;
-}
-
-.flex {
-    display: flex;
-}
-
-.flexColumnCentered {
-    flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
 }
 
-main {
-    padding: 0 20%;
+.mainBox {
+    max-width: 90%;
 }
 
 .title {
@@ -26,12 +17,12 @@ main {
 }
 
 video {
-    width: 1020px;
+    width: 100%;
 }
 
 .scrollableBox {
     height: 300px;
-    width: 500px;
+    max-width: 500px;
     overflow-y: scroll;
 
     font-size: 1.8rem;

@@ -5,18 +5,18 @@ import styles from './pageTemplate.module.css';
    ob: json object from which the data will be rendered 
    
    returns: a jsx expression with the page elements rendered. */
-function PageTemplate({ data }) {
+function PageTemplate({ content }) {
     // Converts the string to a jsx expression
-    console.log(data.transcripcion, "hola");
-    const transcription = data.transcripcion.split('<br>').map(str => <React.Fragment >{str}<br /></React.Fragment>); 
+    const transcription = content.transcripcion.split('<br>').map(str => <React.Fragment >{str}<br /></React.Fragment>); 
     return (
-        <main className={`${ styles.flex } ${ styles.flexColumnCentered }`}>
+        <>
             <div className={ styles.wrapper }>
-                <h1 className={ styles.title }>{ data.cliente }</h1>
+                <main className={ styles.mainBox }>
+                <h1 className={ styles.title }>{ content.cliente }</h1>
                 <h2 className={ styles.title }>Test: Test de usabilidad en el sitio web</h2>
-                <h3 className={ styles.subtitle }>{ data.plataforma }</h3>
+                <h3 className={ styles.subtitle }>{ content.plataforma }</h3>
                 <video className={ styles.centered } controls>
-                    <source src={ data.linkVideo } type="video/mp4" />
+                    <source src={ content.linkVideo } type="video/mp4" />
                     Tu navegador no soporta el tag de video.
                 </video>
                 <h3 className={ styles.subtitle }>Transcripción</h3>
@@ -24,9 +24,10 @@ function PageTemplate({ data }) {
                     { transcription }
                 </div>
                 <h3 className={ styles.subtitle }>Tareas</h3>
-                <p className={ styles.parragraph }>{`Escenario: ${data.escenario}`}</p>
+                <p>{`Escenario: ${content.escenario}`}</p>
+</main>
             </div>
-        </main>
+</>
     );
 }
 
