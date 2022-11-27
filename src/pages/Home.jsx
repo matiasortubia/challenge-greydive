@@ -12,11 +12,16 @@ const Home = ({ data }) => {
                 <main className={ styles.mainBox }>
                     <h2>Tests</h2>
                     <div className={ styles.linksContainer }>
-                        { data.map(el => {
+                        { data.map((el, i) => {
+                        let testerNumber = i + 1;
                         return (
-                            <Link to={ `/${ el.cliente }` }>
+                            <Link to={ `/${ el.cliente }/testeador-${ testerNumber }` } 
+                                  key={ uuidv4() }>
                                 <button className={ styles.linkBox } key={ uuidv4() }>
                                     { el.cliente }
+                                    <p className={ styles.testerText }>
+                                        { `Testeador ${ testerNumber }` }
+                                    </p>
                                 </button>        
                             </Link>
                             );

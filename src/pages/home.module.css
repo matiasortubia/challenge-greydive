@@ -29,6 +29,10 @@
     border: none;
 }
 
+.testerText {
+    color: #d4145a;
+}
+
 @media screen and (min-width: 1024px) {
     .mainBox {
         max-width: 60%;
