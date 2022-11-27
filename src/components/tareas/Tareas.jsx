@@ -6,10 +6,11 @@ const Tareas = ({ content }) => {
 
     return (
         <>
-            <h3 className={ styles.subtitle }>Tareas</h3>
-            <p>{`Escenario: ${ content.escenario }`}</p>
             { content.preguntas.map((item, i) => {
-                const itemContent = item.texto.replace('\\n', '\n')
+                //const itemContent = item.texto.replace('\\n', '\n')
+                const itemContent = item.texto.split('\\n').map(str => (
+                    <React.Fragment key={ uuidv4() }>{str}<br /></React.Fragment>
+                ));
                 return (
                     <React.Fragment key={ uuidv4() }>
                         <div className={ styles.itemContainer }>

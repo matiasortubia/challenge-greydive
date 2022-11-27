@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { Tareas } from '../tareas/Tareas.jsx';
 import { Header } from '../header/Header.jsx'
 import styles from './pageTemplate.module.css';
@@ -10,7 +11,10 @@ import styles from './pageTemplate.module.css';
 function PageTemplate({ content }) {
     document.title = content.cliente;
 
-    const transcription = content.transcripcion.split('<br>').join('\n');
+    const transcription = content.transcripcion.split('<br>').map(str => (
+        <React.Fragment key={ uuidv4() }>{str}<br /></React.Fragment>
+    )); 
+
 
     return (
         <>
@@ -29,6 +33,8 @@ function PageTemplate({ content }) {
                     <div className={ styles.scrollableBox }>
                         <p>{ transcription }</p>
                     </div>
+                    <h3 className={ styles.subtitle }>Tareas</h3>
+                    <p>{`Escenario: ${ content.escenario }`}</p>
                     <Tareas content={ content } />
                 </main>
             </div>
