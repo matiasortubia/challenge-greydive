@@ -28,3 +28,8 @@ video {
     max-width: 50rem;
 }
 
+@media screen and (min-width: 1024px) {
+    .mainBox {
+        max-width: 60%;
+    }
+}

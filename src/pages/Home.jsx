@@ -6,22 +6,21 @@ import { Header } from '../components/header/Header.jsx';
 const Home = ({ data }) => {
     document.title = "Inicio"
     return (
-
-<>
-<Header />
-        <div className={`${ styles.flex } ${ styles.flexColumnCentered }`}>
+        <>
+            <Header />
             <div className={ styles.wrapper }>
-                <ul>
-                    { data.map(el => {
-                    return (
-                    <li key={ uuidv4() }>
-                        <Link to={ `/${ el.cliente }` }>{ el.cliente }</Link>
-                    </li> );
-                    }) }
-                </ul>
+                <main className={ styles.mainBox }>
+                    <ul>
+                        { data.map(el => {
+                        return (
+                        <li key={ uuidv4() }>
+                            <Link to={ `/${ el.cliente }` }>{ el.cliente }</Link>
+                        </li> );
+                        }) }
+                    </ul>
+                </main>
             </div>
-        </div>
-</>
+        </>
     );
 };
 
