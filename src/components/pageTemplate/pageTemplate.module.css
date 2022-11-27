@@ -8,14 +8,6 @@
     max-width: 90%;
 }
 
-.title {
-    font-size: 3.5rem;
-}
-
-.subtitle {
-    font-size: 2.7rem;
-}
-
 video {
     width: 100%;
 }
@@ -28,7 +20,4 @@ video {
     font-size: 1.8rem;
 }
 
-p {
-    font-size: 1.7rem;
-    font-weight: bold;
-}
+
