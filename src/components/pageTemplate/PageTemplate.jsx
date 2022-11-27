@@ -1,7 +1,8 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Tareas } from '../tareas/Tareas.jsx';
-import { Header } from '../header/Header.jsx'
+import { Header } from '../header/Header.jsx';
+import { ScrollToTop } from '../scrollToTop/ScrollToTop';
 import styles from './pageTemplate.module.css';
 
 /* Renders a page from the data on a json object.
@@ -34,6 +35,7 @@ function PageTemplate({ content, testerNumber }) {
                     <h3 className={ styles.subtitle }>Tareas</h3>
                     <p className={ styles.introductionText }>{`Escenario: ${ content.escenario }`}</p>
                     <Tareas content={ content } />
+                    <ScrollToTop />
                 </main>
             </div>
         </>

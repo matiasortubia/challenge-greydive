@@ -1,0 +1,18 @@
+.scrollToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.scrollToTopButton {
+    padding: 3px;
+    background-color: blanchedalmond;
+}
+
+.show {
+    opacity: 100;
+}
+
+.notShow {
+    opacity: 0;
+}
