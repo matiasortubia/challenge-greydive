@@ -1,6 +1,7 @@
 .itemContainer {
     max-width: 700px;
     padding: 20px 20px 20px 0;
+    border-top: 2px solid #fff;
 }
 
 .textoDuracion {
