@@ -5,8 +5,9 @@
 }
 
 .scrollToTopButton {
-    padding: 3px;
-    background-color: blanchedalmond;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .show {
@@ -15,4 +16,10 @@
 
 .notShow {
     opacity: 0;
+}
+
+.scrollToTopIcon {
+    color: #d4145a;
+    height: 4rem;
+    width: 4rem;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './scrollToTop.module.css';
+import { IoIosArrowDropupCircle } from 'react-icons/io'; 
 
 const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +29,7 @@ const ScrollToTop = () => {
             <button type="button" 
                     onClick={ scrollToTop } 
                     className={ `${styles.scrollToTopButton} ${isVisible ? styles.show : styles.notShow}` } >
-                Top
+                <IoIosArrowDropupCircle className={ styles.scrollToTopIcon } />
             </button>
         </div>
     );
