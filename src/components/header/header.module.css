@@ -1,6 +1,18 @@
+header {
+    padding: 2rem 0 1rem 2.5rem;
+    background-color: #41416d;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
 .linkInicio {
     text-decoration: none;
     color: inherit;
     font-size: 4rem;
     font-weight: bold;
+}
+
+.linkInicio:hover {
+    color: #00ffff;
 }

@@ -6,6 +6,10 @@
 
 .mainBox {
     max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 10rem;
 }
 
 video {
@@ -16,8 +20,6 @@ video {
     height: 300px;
     max-width: 500px;
     overflow-y: scroll;
-
-    font-size: 1.8rem;
 }
 
 

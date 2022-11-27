@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 const Header = () => {
   return (
     <header>
-      <Link className={ styles.linkInicio } to="/">Inicio</Link>
+      <Link className={ styles.linkInicio } to="/">Volver</Link>
     </header>
   );
 };

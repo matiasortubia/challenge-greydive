@@ -9,12 +9,14 @@ import styles from './pageTemplate.module.css';
    returns: a jsx expression with the page elements rendered. */
 function PageTemplate({ content }) {
     document.title = content.cliente;
-    // Converts the string to a jsx expression
-    const transcription = content.transcripcion.split('<br>').map(str => <React.Fragment >{str}<br /></React.Fragment>); 
+
+    const transcription = content.transcripcion.split('<br>').join('\n');
+
     return (
         <>
+
+            <Header />
             <div className={ styles.wrapper }>
-                <Header />
                 <main className={ styles.mainBox }>
                     <h2 className={ styles.title }>{ content.cliente }</h2>
                     <h2 className={ styles.title }>Test: Test de usabilidad en el sitio web</h2>
@@ -25,7 +27,7 @@ function PageTemplate({ content }) {
                     </video>
                     <h3 className={ styles.subtitle }>Transcripción</h3>
                     <div className={ styles.scrollableBox }>
-                        { transcription }
+                        <p>{ transcription }</p>
                     </div>
                     <Tareas content={ content } />
                 </main>
