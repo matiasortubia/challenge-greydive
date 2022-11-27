@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tareas } from '../tareas/Tareas.jsx';
+import { Header } from '../header/Header.jsx'
 import styles from './pageTemplate.module.css';
 
 /* Renders a page from the data on a json object.
@@ -7,11 +8,13 @@ import styles from './pageTemplate.module.css';
    
    returns: a jsx expression with the page elements rendered. */
 function PageTemplate({ content }) {
+    document.title = content.cliente;
     // Converts the string to a jsx expression
     const transcription = content.transcripcion.split('<br>').map(str => <React.Fragment >{str}<br /></React.Fragment>); 
     return (
         <>
             <div className={ styles.wrapper }>
+                <Header />
                 <main className={ styles.mainBox }>
                     <h2 className={ styles.title }>{ content.cliente }</h2>
                     <h2 className={ styles.title }>Test: Test de usabilidad en el sitio web</h2>
