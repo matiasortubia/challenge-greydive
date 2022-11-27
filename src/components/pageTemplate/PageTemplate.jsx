@@ -9,7 +9,7 @@ import styles from './pageTemplate.module.css';
    
    returns: a jsx expression with the page elements rendered. */
 function PageTemplate({ content }) {
-    document.title = content.cliente;
+    document.title = content.cliente + " | Challenge Greydive";
 
     const transcription = content.transcripcion.split('<br>').map(str => (
         <React.Fragment key={ uuidv4() }>{str}<br /></React.Fragment>

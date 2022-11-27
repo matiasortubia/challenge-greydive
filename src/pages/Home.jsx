@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Header } from '../components/header/Header.jsx';
 
 const Home = ({ data }) => {
-    document.title = "Inicio"
+    document.title = "Inicio | Challenge Greydive"
     return (
         <>
             <Header />
