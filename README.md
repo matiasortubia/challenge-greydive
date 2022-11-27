@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+# Challenge for Greydive
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can visit https://greydive-matias-ortubia.vercel.app/ to see the deploy, or you can clone the repo and run it locally.
 
-## Available Scripts
+## How it works
+
+It generates routes from the db.json file. It takes the items in there to generate the contents in each page.
+
+## How to run the app
 
 In the project directory, you can run:
 
@@ -68,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
